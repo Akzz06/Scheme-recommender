@@ -1,67 +1,72 @@
-Offline-First Scheme Recommender
-An offline-first, multilingual (EN, HI, TA) Flutter application designed to help users discover relevant government schemes without an internet connection. The app provides personalized recommendations by filtering a large, bundled JSON dataset of over 3,700 schemes directly on the user's device.
+# 🌾 **Offline-First Scheme Recommender App**
 
-This project is built to be a high-performance, responsive, and always-available mobile solution, demonstrating how to manage and filter a large local dataset efficiently—a core requirement for modern mobile applications (like management games, productivity tools, etc.).
+### 🧠 Overview  
+An **offline-first, multilingual (EN | HI | TA)** Flutter application that helps users discover **relevant government schemes** — even **without an internet connection**.  
+It filters a **large bundled dataset (3,700+ schemes)** directly on the user’s device to provide **personalized recommendations** based on user profiles.
 
-✨ Core Features
-100% Offline-First: The app is fully functional without an internet connection. All 3,700+ schemes are bundled locally as a JSON asset.
+This project demonstrates how to build **high-performance**, **responsive**, and **always-available** mobile apps capable of managing large datasets efficiently — a principle often applied in **management games and productivity tools**.
 
-Multilingual Support: Full UI and data support for English, Hindi, and Tamil. The user can switch languages at any time.
+---
 
-Personalized Recommendations: A robust local filtering engine recommends schemes by matching a user's profile (Age, Gender, State, Caste, Occupation) against complex scheme criteria.
+## ✨ **Core Features**
 
-Dynamic Category Filtering: The "All Schemes" tab features a horizontal, icon-based chip list (e.g., 🌾 Agriculture, 💰 Loan, 🎓 Student) with a live count of schemes in each category.
+- 📴 **100% Offline-First:**  
+  Fully functional without internet. All 3,700+ schemes are bundled locally in a JSON file.  
 
-Advanced Search & Filtering: Users can browse schemes by State/Central status or use the search bar within any category to filter results instantly.
+- 🌐 **Multilingual Support:**  
+  Full UI and data support for **English**, **Hindi**, and **Tamil**. Language can be switched dynamically.  
 
-Bookmarking: Users can save their favorite schemes to a "Saved" tab for quick access. This state is persistent and synced across all app views.
+- 👤 **Personalized Recommendations:**  
+  Intelligent local filtering engine matches the user’s profile *(Age, Gender, State, Caste, Occupation)* to relevant schemes.  
 
-Text-to-Speech (TTS): Integrated TTS reads scheme details aloud in the user's selected language (EN, HI, or TA) for enhanced accessibility.
+- 🧩 **Dynamic Category Filtering:**  
+  The “All Schemes” tab features an icon-based chip list (🌾 Agriculture | 💰 Loan | 🎓 Student | 🏠 Housing)  
+  with **real-time scheme counts** for each category.  
 
-Rich Content Display: Scheme details are rendered using Markdown to display highlighted bold text for key information (e.g., amounts, eligibility), making complex data easy to scan.
+- 🔍 **Advanced Search & Filters:**  
+  Filter instantly by **State/Central** status or search within any category for instant results.  
 
-🏛️ Architecture
-This project is intentionally built as an offline-first application to ensure a fast, responsive, and reliable user experience, even with a poor or non-existent internet connection.
+- 💾 **Bookmarking:**  
+  Save favorite schemes to a **Saved tab**, persistent across app restarts using local storage.  
 
-Data Source: All scheme data is pre-processed (translated, categorized) and stored in a single cleaned_schemes.json file, which is bundled directly with the app.
+- 🗣️ **Text-to-Speech (TTS):**  
+  Integrated **flutter_tts** reads scheme details aloud in the user’s selected language (EN, HI, TA).  
 
-Data Handling:
+- 📄 **Rich Markdown Display:**  
+  Scheme details rendered in **Markdown** for bold highlights and structured, easy-to-read information.
 
-SchemeService: Loads the bundled JSON data into memory.
+---
 
-CachingService: Uses Hive as a resilient backup cache for the scheme data.
+## 🏛️ **Architecture**
 
-State & Filtering: All filtering, searching, and recommendation logic happens locally on the user's device for instant results.
+Built as a **truly offline-first** application for **speed**, **reliability**, and **instant responsiveness**, even with poor connectivity.
 
-User Data: SharedPreferences is used for storing the user's profile and bookmark IDs.
+**🗂 Data Source:**  
+All scheme data is preprocessed, categorized, and stored in a single `cleaned_schemes.json` file bundled with the app.
 
-🛠️ Technologies Used
-Flutter & Dart
+**🧩 Data Handling Workflow:**
+| Component | Purpose |
+|------------|----------|
+| `SchemeService` | Loads bundled JSON data into memory |
+| `CachingService` | Uses **Hive** for resilient local caching |
+| **Filtering Engine** | Handles real-time search and filtering locally |
+| `SharedPreferences` | Stores user profiles and bookmarks |
 
-Local Storage: hive (for data caching) & shared_preferences (for user profile/bookmarks).
+---
 
-UI Components: flutter_markdown (for rendering rich text), flutter_tts (for accessibility).
+## 🛠️ **Technologies Used**
 
-State Management: setState (used for managing local state within each tab).
+| Category | Tools & Frameworks |
+|-----------|--------------------|
+| **Language** | Flutter, Dart |
+| **Local Storage** | Hive, SharedPreferences |
+| **UI Components** | flutter_markdown, flutter_tts |
+| **State Management** | setState (local state per tab) |
 
-🚀 Getting Started
-Clone the repository:
+---
 
-Bash
+## 🚀 **Getting Started**
 
+### Clone the repository:
+```bash
 git clone https://github.com/Akzz06/Scheme-recommender.git
-Navigate to the project directory:
-
-Bash
-
-cd Scheme-recommender
-Install dependencies:
-
-Bash
-
-flutter pub get
-Run the app:
-
-Bash
-
-flutter run
