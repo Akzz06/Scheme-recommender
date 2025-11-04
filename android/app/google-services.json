@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "526088613131",
+    "firebase_url": "https://farmer-new-4e4d5-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "farmer-new-4e4d5",
+    "storage_bucket": "farmer-new-4e4d5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526088613131:android:4e3fcb1557b3113abf460e",
+        "android_client_info": {
+          "package_name": "com.example.my_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0MkplgIK380uBo1n9lpu3hiqi_kLYQuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

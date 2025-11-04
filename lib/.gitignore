@@ -1,0 +1,28 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+build/
+*.iml
+*.ipr
+*.iws
+
+# Python
+venv/
+*.pyc
+__pycache__/
+
+# SENSITIVE DATA
+# Ignore the Python scripts that contain your API key
+highlight.py
+list_models.py
+
+# Large Data Files
+# Ignore the output file from your script
+highlighted_schemes.json
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
