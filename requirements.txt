@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+groq
+langchain-community
+langchain-chroma
+langchain-huggingface
+sentence-transformers
+pydantic
